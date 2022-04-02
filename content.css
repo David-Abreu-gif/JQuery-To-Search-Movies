@@ -1,0 +1,129 @@
+/* ---------------------------------Documento */
+body{
+background-image: url(images/background.jpg);
+height: 100vh;
+width: 100vw;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-color: black;
+overflow: hidden;
+}
+
+
+/* ---------------------------------Contenido */
+#content{
+  padding: 75px 40px 40px 50px;
+  overflow: auto;
+  height: 100vh;
+  width: 100vw;
+  background: #00000057;
+}
+
+
+/* ----------Scrollbar */
+#content::-webkit-scrollbar {
+  width: 10px;
+}
+
+#content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#content::-webkit-scrollbar-thumb {
+  background-color: #e91e634d;
+}
+/* ----------Scrollbar */
+
+
+/* ---------------------------------Título de la busqueda */
+#search_title{
+  color: #e91e63;
+}
+#content h2{
+  color: #e91e63;
+}
+
+/* ---------------------------------Todas las peliculas para mostrar */
+#movies{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+}
+
+/* ---------------------------------Template de la Pelicula  */
+.template_movie{
+  border: solid 2px transparent;
+  position: relative;
+  background: #00000000;
+  cursor: pointer;
+}
+
+/* ----------------Sólo imagen */
+.template_movie img{
+  width: 100%
+}
+
+/* ----------------División de Name/Rating */
+.info_movie{
+  position: absolute;
+  top: 0px;
+  padding: 10px;
+  height: 100%;
+}
+
+/* ----------------Sólo nombre */
+.info_movie .name{
+  color: #e91e63;
+  height: 85%;
+  margin: 0px;
+  text-shadow: -1px 1px 6px black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+/* ----------------Sólo rating */
+.info_movie .rating{
+  color: #ffeb3b;
+  text-align-last: right;
+  height: 15%;
+  margin: 0px;
+  text-shadow: -1px 1px 6px black;
+}
+.info_movie .rating img{
+  width: 40px;
+  vertical-align: text-top;
+}
+
+/* ----------------Efecto de pasar el cursor */
+.template_movie:hover{
+  border-color: #03a9f4;
+  transition: 1s;
+}
+
+/* ---------------------------------Icono de Páginas de Contenido */
+#icon_pag{
+  text-align: end;
+  margin-block: 15px;
+}
+
+#icon_left{
+  filter: grayscale(1);
+  cursor: default;
+}
+#icon_right{
+  filter: grayscale(1);
+  cursor: default;
+}
+
+#icon_left.active{
+  filter: grayscale(0);
+  cursor: pointer;
+}
+
+#icon_right.active{
+  filter: grayscale(0);
+  cursor: pointer;
+}
